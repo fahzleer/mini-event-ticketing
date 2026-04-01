@@ -1,0 +1,12 @@
+{
+  "extends": "@repo/tsconfig/app.json",
+  "compilerOptions": {
+    "types": ["bun"],
+    "declaration": false,
+    "declarationMap": false,
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

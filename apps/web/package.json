@@ -1,0 +1,30 @@
+{
+  "name": "@repo/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check src"
+  },
+  "dependencies": {
+    "@repo/types": "workspace:*",
+    "@tanstack/react-query": "^5.62.16",
+    "arktype": "^2.2.0",
+    "axios": "^1.7.9",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.1.1"
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  }
+}

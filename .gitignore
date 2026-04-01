@@ -1,0 +1,15 @@
+node_modules
+dist
+.turbo
+.env
+*.local
+
+# Drizzle
+drizzle/meta
+
+# Bun
+bun.lockb
+
+# OS
+.DS_Store
+Thumbs.db

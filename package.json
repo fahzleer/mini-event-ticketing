@@ -1,0 +1,22 @@
+{
+  "name": "mini-ticketing",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "typecheck": "turbo typecheck",
+    "lint": "biome check .",
+    "format": "biome format . --write",
+    "test": "turbo test",
+    "db:generate": "turbo db:generate",
+    "db:migrate": "turbo db:migrate",
+    "db:seed": "turbo db:seed",
+    "db:studio": "cd packages/db && bun drizzle-kit studio"
+  },
+  "packageManager": "bun@1.3.6",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "turbo": "^2.3.3"
+  }
+}
