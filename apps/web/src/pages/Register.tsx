@@ -15,9 +15,9 @@ type PasswordValidation = {
 
 const RULES: { label: string; key: keyof PasswordValidation }[] = [
   { label: "8+ characters", key: "length" },
-  { label: "One uppercase letter (A–Z)", key: "uppercase" },
-  { label: "One lowercase letter (a–z)", key: "lowercase" },
-  { label: "One number (0–9)", key: "number" },
+  { label: "One uppercase letter (A-Z)", key: "uppercase" },
+  { label: "One lowercase letter (a-z)", key: "lowercase" },
+  { label: "One number (0-9)", key: "number" },
   { label: "One special character (!@#$%^&*)", key: "specialChar" },
 ]
 

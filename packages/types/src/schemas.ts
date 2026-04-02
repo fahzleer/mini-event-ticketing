@@ -4,8 +4,8 @@ import { type } from "arktype"
 
 export const RegisterSchema = type({
   email: "string.email",
-  // ArkRegex: uppercase + digit + min 8 chars
-  password: /^(?=.*[A-Z])(?=.*[0-9]).{8,}$/,
+  // ArkRegex: uppercase + lowercase + digit + special char + min 8 chars
+  password: /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/,
   name: "1 <= string <= 255",
 })
 

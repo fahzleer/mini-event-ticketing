@@ -1,4 +1,4 @@
-/// <reference types="@types/bun" />
+/// <reference types="node" />
 import type { Config } from "drizzle-kit"
 
 export default {
@@ -6,6 +6,6 @@ export default {
   out: "./drizzle",
   dialect: "postgresql",
   dbCredentials: {
-    url: Bun.env.DATABASE_URL ?? "postgresql://postgres:postgres@localhost:5433/ticketing",
+    url: process.env.DATABASE_URL ?? "postgresql://postgres:postgres@localhost:5433/ticketing",
   },
 } satisfies Config

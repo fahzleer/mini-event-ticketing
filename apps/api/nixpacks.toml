@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["bun"]
+
+[phases.install]
+cmds = ["bun install"]
+
+[start]
+cmd = "bun ../../packages/db/src/migrate.ts && bun src/index.ts"
