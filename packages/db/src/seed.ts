@@ -9,7 +9,8 @@ async function seed() {
   await db.insert(events).values([
     {
       name: "Bangkok Coffee Festival 2026",
-      description: "Thailand's largest coffee festival featuring over 100 roasters, barista competitions, and cupping sessions from across Southeast Asia.",
+      description:
+        "Thailand's largest coffee festival featuring over 100 roasters, barista competitions, and cupping sessions from across Southeast Asia.",
       totalTickets: 500,
       remainingTickets: 500,
       eventDate: new Date("2026-06-15T09:00:00Z"),
@@ -17,7 +18,8 @@ async function seed() {
     },
     {
       name: "Specialty Coffee Cupping Workshop",
-      description: "Learn to taste coffee like a pro. We'll cup 12 single origins and you'll leave knowing exactly what you like and why.",
+      description:
+        "Learn to taste coffee like a pro. We'll cup 12 single origins and you'll leave knowing exactly what you like and why.",
       totalTickets: 20,
       remainingTickets: 20,
       eventDate: new Date("2026-07-05T09:00:00Z"),
@@ -25,7 +27,8 @@ async function seed() {
     },
     {
       name: "Latte Art Throwdown",
-      description: "Baristas compete head-to-head in free-pour latte art. Fast, fun, and judged by some of Thailand's best.",
+      description:
+        "Baristas compete head-to-head in free-pour latte art. Fast, fun, and judged by some of Thailand's best.",
       totalTickets: 100,
       remainingTickets: 80,
       eventDate: new Date("2026-07-12T18:00:00Z"),
@@ -33,7 +36,8 @@ async function seed() {
     },
     {
       name: "Farm to Cup: Northern Thailand Origin Trip",
-      description: "Two days at a Doi Chang coffee farm. Pick cherries, process your own lot, and cup what you make.",
+      description:
+        "Two days at a Doi Chang coffee farm. Pick cherries, process your own lot, and cup what you make.",
       totalTickets: 15,
       remainingTickets: 6,
       eventDate: new Date("2026-07-20T07:00:00Z"),
@@ -41,7 +45,8 @@ async function seed() {
     },
     {
       name: "Espresso Extraction Masterclass",
-      description: "Dial in your shots with precision. Covers dose, yield, time, pressure profiling, and sensory evaluation.",
+      description:
+        "Dial in your shots with precision. Covers dose, yield, time, pressure profiling, and sensory evaluation.",
       totalTickets: 16,
       remainingTickets: 16,
       eventDate: new Date("2026-08-01T10:00:00Z"),
@@ -49,7 +54,8 @@ async function seed() {
     },
     {
       name: "Cold Brew & Iced Coffee Workshop",
-      description: "Hot climate, cold coffee. Learn cold brew ratios, Japanese iced pour-over, and building a cafe cold menu.",
+      description:
+        "Hot climate, cold coffee. Learn cold brew ratios, Japanese iced pour-over, and building a cafe cold menu.",
       totalTickets: 20,
       remainingTickets: 15,
       eventDate: new Date("2026-08-08T10:00:00Z"),
@@ -57,7 +63,8 @@ async function seed() {
     },
     {
       name: "Thailand Barista Championship — Qualifier",
-      description: "Watch Thailand's top baristas compete for a place at the national finals. Espresso, milk, and signature drink rounds.",
+      description:
+        "Watch Thailand's top baristas compete for a place at the national finals. Espresso, milk, and signature drink rounds.",
       totalTickets: 200,
       remainingTickets: 120,
       eventDate: new Date("2026-08-15T09:00:00Z"),
@@ -65,7 +72,8 @@ async function seed() {
     },
     {
       name: "Coffee & Food Pairing Dinner",
-      description: "A seven-course dinner where every dish is paired with a different coffee — from washed light roasts to natural process naturals.",
+      description:
+        "A seven-course dinner where every dish is paired with a different coffee — from washed light roasts to natural process naturals.",
       totalTickets: 30,
       remainingTickets: 12,
       eventDate: new Date("2026-08-22T18:30:00Z"),
@@ -73,7 +81,8 @@ async function seed() {
     },
     {
       name: "Home Barista Bootcamp",
-      description: "Everything you need to make great coffee at home. Grinder calibration, pour-over technique, and milk texturing basics.",
+      description:
+        "Everything you need to make great coffee at home. Grinder calibration, pour-over technique, and milk texturing basics.",
       totalTickets: 24,
       remainingTickets: 24,
       eventDate: new Date("2026-09-05T10:00:00Z"),
@@ -81,7 +90,8 @@ async function seed() {
     },
     {
       name: "Coffee Roasting Fundamentals",
-      description: "Get behind a sample roaster and learn the Maillard reaction, first crack, development time, and how to build a roast profile.",
+      description:
+        "Get behind a sample roaster and learn the Maillard reaction, first crack, development time, and how to build a roast profile.",
       totalTickets: 12,
       remainingTickets: 4,
       eventDate: new Date("2026-09-12T09:00:00Z"),
@@ -89,7 +99,8 @@ async function seed() {
     },
     {
       name: "Aeropress Championship Thailand",
-      description: "The most democratic coffee competition — any Aeropress recipe goes. Open to baristas and enthusiasts alike.",
+      description:
+        "The most democratic coffee competition — any Aeropress recipe goes. Open to baristas and enthusiasts alike.",
       totalTickets: 80,
       remainingTickets: 80,
       eventDate: new Date("2026-09-19T10:00:00Z"),
@@ -97,7 +108,8 @@ async function seed() {
     },
     {
       name: "Coffee Business Fundamentals",
-      description: "Thinking of opening a cafe? This one-day course covers location, menu, equipment, staffing, and unit economics.",
+      description:
+        "Thinking of opening a cafe? This one-day course covers location, menu, equipment, staffing, and unit economics.",
       totalTickets: 30,
       remainingTickets: 30,
       eventDate: new Date("2026-09-26T09:00:00Z"),
@@ -105,7 +117,8 @@ async function seed() {
     },
     {
       name: "Natural Process Coffee Deep Dive",
-      description: "Why do naturals taste fruity? Explore fermentation, drying beds, and how processing shapes flavour.",
+      description:
+        "Why do naturals taste fruity? Explore fermentation, drying beds, and how processing shapes flavour.",
       totalTickets: 20,
       remainingTickets: 20,
       eventDate: new Date("2026-10-03T10:00:00Z"),
@@ -113,7 +126,8 @@ async function seed() {
     },
     {
       name: "Sensory Training: Building Your Palate",
-      description: "Train your taste memory with flavour wheels, aroma kits, and blind tasting exercises used by Q Graders.",
+      description:
+        "Train your taste memory with flavour wheels, aroma kits, and blind tasting exercises used by Q Graders.",
       totalTickets: 16,
       remainingTickets: 8,
       eventDate: new Date("2026-10-10T10:00:00Z"),
@@ -121,7 +135,8 @@ async function seed() {
     },
     {
       name: "Chiang Mai Coffee Tour",
-      description: "A guided day through Chiang Mai's best specialty cafes with tastings, roastery visits, and a cupping session.",
+      description:
+        "A guided day through Chiang Mai's best specialty cafes with tastings, roastery visits, and a cupping session.",
       totalTickets: 20,
       remainingTickets: 14,
       eventDate: new Date("2026-10-17T08:00:00Z"),
@@ -129,7 +144,8 @@ async function seed() {
     },
     {
       name: "Women in Coffee Symposium",
-      description: "Celebrating the women shaping specialty coffee across farming, roasting, and service in Southeast Asia.",
+      description:
+        "Celebrating the women shaping specialty coffee across farming, roasting, and service in Southeast Asia.",
       totalTickets: 100,
       remainingTickets: 100,
       eventDate: new Date("2026-10-24T09:00:00Z"),
@@ -137,7 +153,8 @@ async function seed() {
     },
     {
       name: "Filter Coffee Brewing Masterclass",
-      description: "V60, Chemex, Kalita Wave — understand the variables and brew consistently excellent filter coffee every time.",
+      description:
+        "V60, Chemex, Kalita Wave — understand the variables and brew consistently excellent filter coffee every time.",
       totalTickets: 16,
       remainingTickets: 16,
       eventDate: new Date("2026-11-07T10:00:00Z"),
@@ -145,7 +162,8 @@ async function seed() {
     },
     {
       name: "Coffee & Chocolate Pairing Workshop",
-      description: "Single origin chocolate meets single origin coffee. Explore how terroir expresses itself across two beloved fermented foods.",
+      description:
+        "Single origin chocolate meets single origin coffee. Explore how terroir expresses itself across two beloved fermented foods.",
       totalTickets: 24,
       remainingTickets: 18,
       eventDate: new Date("2026-11-14T14:00:00Z"),
@@ -153,7 +171,8 @@ async function seed() {
     },
     {
       name: "Moka Pot & Stovetop Coffee Masterclass",
-      description: "The humble moka pot, mastered. Grind size, heat control, and getting consistent results from a classic tool.",
+      description:
+        "The humble moka pot, mastered. Grind size, heat control, and getting consistent results from a classic tool.",
       totalTickets: 20,
       remainingTickets: 20,
       eventDate: new Date("2026-11-21T10:00:00Z"),
@@ -161,7 +180,8 @@ async function seed() {
     },
     {
       name: "Decaf Done Right Workshop",
-      description: "Swiss water, sugarcane EA, and CO₂ process — why good decaf exists and how to brew it properly.",
+      description:
+        "Swiss water, sugarcane EA, and CO₂ process — why good decaf exists and how to brew it properly.",
       totalTickets: 16,
       remainingTickets: 16,
       eventDate: new Date("2026-11-28T10:00:00Z"),
@@ -169,7 +189,8 @@ async function seed() {
     },
     {
       name: "Q Grader Exam Preparation Course",
-      description: "A five-day intensive to prepare for the SCA Q Grader certification — the gold standard in coffee quality assessment.",
+      description:
+        "A five-day intensive to prepare for the SCA Q Grader certification — the gold standard in coffee quality assessment.",
       totalTickets: 12,
       remainingTickets: 3,
       eventDate: new Date("2026-12-05T09:00:00Z"),
@@ -177,7 +198,8 @@ async function seed() {
     },
     {
       name: "Thailand Coffee Roasters Showcase",
-      description: "Twenty Thai roasters. One venue. Come taste what's happening in specialty coffee across the country right now.",
+      description:
+        "Twenty Thai roasters. One venue. Come taste what's happening in specialty coffee across the country right now.",
       totalTickets: 300,
       remainingTickets: 200,
       eventDate: new Date("2026-12-12T10:00:00Z"),
@@ -185,7 +207,8 @@ async function seed() {
     },
     {
       name: "Coffee Cocktails & Spirits Workshop",
-      description: "Espresso martinis are just the start. Explore coffee as a cocktail ingredient with a professional mixologist.",
+      description:
+        "Espresso martinis are just the start. Explore coffee as a cocktail ingredient with a professional mixologist.",
       totalTickets: 30,
       remainingTickets: 22,
       eventDate: new Date("2026-12-19T18:00:00Z"),
@@ -193,7 +216,8 @@ async function seed() {
     },
     {
       name: "New Year's Eve Coffee Tasting",
-      description: "Send off the year with a cupping of twelve exceptional coffees and a glass of something sparkling at midnight.",
+      description:
+        "Send off the year with a cupping of twelve exceptional coffees and a glass of something sparkling at midnight.",
       totalTickets: 40,
       remainingTickets: 10,
       eventDate: new Date("2026-12-31T20:00:00Z"),
@@ -201,7 +225,8 @@ async function seed() {
     },
     {
       name: "Doi Inthanon Origin Experience",
-      description: "Visit coffee farms on Thailand's highest mountain. Meet farmers, see processing stations, and cup the harvest.",
+      description:
+        "Visit coffee farms on Thailand's highest mountain. Meet farmers, see processing stations, and cup the harvest.",
       totalTickets: 15,
       remainingTickets: 15,
       eventDate: new Date("2027-01-09T07:00:00Z"),
@@ -209,7 +234,8 @@ async function seed() {
     },
     {
       name: "SCA Barista Skills Foundation",
-      description: "The official SCA Barista Skills Foundation course and exam. A recognised entry-level credential for coffee professionals.",
+      description:
+        "The official SCA Barista Skills Foundation course and exam. A recognised entry-level credential for coffee professionals.",
       totalTickets: 12,
       remainingTickets: 12,
       eventDate: new Date("2027-01-16T09:00:00Z"),
@@ -217,7 +243,8 @@ async function seed() {
     },
     {
       name: "Coffee Subscription Tasting Club — January",
-      description: "Monthly gathering of our coffee subscription members. Cup this month's selections together and share notes.",
+      description:
+        "Monthly gathering of our coffee subscription members. Cup this month's selections together and share notes.",
       totalTickets: 25,
       remainingTickets: 20,
       eventDate: new Date("2027-01-23T14:00:00Z"),
@@ -225,7 +252,8 @@ async function seed() {
     },
     {
       name: "Robusta Reimagined Workshop",
-      description: "Robusta gets a bad reputation — but high-grown Thai robusta is worth tasting. Explore what it can be.",
+      description:
+        "Robusta gets a bad reputation — but high-grown Thai robusta is worth tasting. Explore what it can be.",
       totalTickets: 20,
       remainingTickets: 20,
       eventDate: new Date("2027-02-06T10:00:00Z"),
@@ -233,7 +261,8 @@ async function seed() {
     },
     {
       name: "Milk Science for Baristas",
-      description: "Proteins, fats, temperature, and the physics of steam. Why milk behaves differently and how to control it.",
+      description:
+        "Proteins, fats, temperature, and the physics of steam. Why milk behaves differently and how to control it.",
       totalTickets: 16,
       remainingTickets: 10,
       eventDate: new Date("2027-02-13T10:00:00Z"),
@@ -241,7 +270,8 @@ async function seed() {
     },
     {
       name: "Valentine's Coffee & Dessert Pairing",
-      description: "A romantic evening pairing specialty coffees with handmade pastries. Bookings for two.",
+      description:
+        "A romantic evening pairing specialty coffees with handmade pastries. Bookings for two.",
       totalTickets: 20,
       remainingTickets: 6,
       eventDate: new Date("2027-02-14T18:00:00Z"),
@@ -249,7 +279,8 @@ async function seed() {
     },
     {
       name: "Open Cupping: Ethiopia & Kenya",
-      description: "A free public cupping focused on East African coffees. No experience needed — just curiosity.",
+      description:
+        "A free public cupping focused on East African coffees. No experience needed — just curiosity.",
       totalTickets: 30,
       remainingTickets: 30,
       eventDate: new Date("2027-02-20T14:00:00Z"),
@@ -257,7 +288,8 @@ async function seed() {
     },
     {
       name: "Coffee Water Chemistry Workshop",
-      description: "Water is 98% of your coffee. Learn TDS, mineral content, and how to build the perfect brewing water.",
+      description:
+        "Water is 98% of your coffee. Learn TDS, mineral content, and how to build the perfect brewing water.",
       totalTickets: 16,
       remainingTickets: 16,
       eventDate: new Date("2027-03-06T10:00:00Z"),
@@ -265,7 +297,8 @@ async function seed() {
     },
     {
       name: "Phuket Coffee Scene Tour",
-      description: "A guided tour of the best specialty coffee spots in Phuket Town with tastings and a roastery visit.",
+      description:
+        "A guided tour of the best specialty coffee spots in Phuket Town with tastings and a roastery visit.",
       totalTickets: 20,
       remainingTickets: 20,
       eventDate: new Date("2027-03-13T09:00:00Z"),
@@ -273,7 +306,8 @@ async function seed() {
     },
     {
       name: "Cafe Design & Atmosphere Workshop",
-      description: "How lighting, layout, music, and furniture shape the coffee experience — with a real interior designer.",
+      description:
+        "How lighting, layout, music, and furniture shape the coffee experience — with a real interior designer.",
       totalTickets: 25,
       remainingTickets: 25,
       eventDate: new Date("2027-03-20T10:00:00Z"),
@@ -281,7 +315,8 @@ async function seed() {
     },
     {
       name: "SCA Brewing Foundation Course",
-      description: "The official SCA Brewing Foundation exam. Covers extraction theory, brew ratios, and equipment calibration.",
+      description:
+        "The official SCA Brewing Foundation exam. Covers extraction theory, brew ratios, and equipment calibration.",
       totalTickets: 12,
       remainingTickets: 8,
       eventDate: new Date("2027-03-27T09:00:00Z"),
@@ -289,7 +324,8 @@ async function seed() {
     },
     {
       name: "Coffee Photography Workshop",
-      description: "Shoot cafe scenes and coffee products that people actually stop scrolling for. Lighting, styling, and editing.",
+      description:
+        "Shoot cafe scenes and coffee products that people actually stop scrolling for. Lighting, styling, and editing.",
       totalTickets: 15,
       remainingTickets: 15,
       eventDate: new Date("2027-04-03T10:00:00Z"),
@@ -297,7 +333,8 @@ async function seed() {
     },
     {
       name: "Anaerobic Fermentation Deep Dive",
-      description: "The science behind one of specialty coffee's most controversial processing methods — and why it's here to stay.",
+      description:
+        "The science behind one of specialty coffee's most controversial processing methods — and why it's here to stay.",
       totalTickets: 20,
       remainingTickets: 20,
       eventDate: new Date("2027-04-10T10:00:00Z"),
@@ -305,7 +342,8 @@ async function seed() {
     },
     {
       name: "Coffee Menu Development Workshop",
-      description: "Build a seasonal cafe menu from scratch. Recipe development, costing, margins, and customer testing.",
+      description:
+        "Build a seasonal cafe menu from scratch. Recipe development, costing, margins, and customer testing.",
       totalTickets: 16,
       remainingTickets: 12,
       eventDate: new Date("2027-04-17T10:00:00Z"),
@@ -313,7 +351,8 @@ async function seed() {
     },
     {
       name: "Songkran Coffee Pop-Up",
-      description: "A special pop-up celebrating Songkran with Thai-inspired coffee drinks and traditional snacks.",
+      description:
+        "A special pop-up celebrating Songkran with Thai-inspired coffee drinks and traditional snacks.",
       totalTickets: 100,
       remainingTickets: 60,
       eventDate: new Date("2027-04-13T10:00:00Z"),
@@ -321,7 +360,8 @@ async function seed() {
     },
     {
       name: "Grinder Masterclass",
-      description: "Burr geometry, RPM, retention, and why your grinder matters more than your espresso machine.",
+      description:
+        "Burr geometry, RPM, retention, and why your grinder matters more than your espresso machine.",
       totalTickets: 16,
       remainingTickets: 16,
       eventDate: new Date("2027-05-01T10:00:00Z"),
@@ -329,7 +369,8 @@ async function seed() {
     },
     {
       name: "Thailand National Barista Championship — Finals",
-      description: "The best baristas in Thailand compete for the national title and a place at the World Barista Championship.",
+      description:
+        "The best baristas in Thailand compete for the national title and a place at the World Barista Championship.",
       totalTickets: 400,
       remainingTickets: 250,
       eventDate: new Date("2027-05-08T09:00:00Z"),
@@ -337,7 +378,8 @@ async function seed() {
     },
     {
       name: "Coffee & Mindfulness Morning",
-      description: "A slow morning with guided meditation, mindful brewing, and intentional tasting. No rushing.",
+      description:
+        "A slow morning with guided meditation, mindful brewing, and intentional tasting. No rushing.",
       totalTickets: 20,
       remainingTickets: 20,
       eventDate: new Date("2027-05-15T07:30:00Z"),
@@ -345,7 +387,8 @@ async function seed() {
     },
     {
       name: "Thai Coffee Terroir Seminar",
-      description: "What makes Thai coffee Thai? Altitude, soil, variety, and processing — a tasting journey through the country's regions.",
+      description:
+        "What makes Thai coffee Thai? Altitude, soil, variety, and processing — a tasting journey through the country's regions.",
       totalTickets: 30,
       remainingTickets: 30,
       eventDate: new Date("2027-05-22T10:00:00Z"),
@@ -353,7 +396,8 @@ async function seed() {
     },
     {
       name: "Coffee Startup Pitching Night",
-      description: "Coffee entrepreneurs pitch their businesses to investors and industry veterans. Come watch or come pitch.",
+      description:
+        "Coffee entrepreneurs pitch their businesses to investors and industry veterans. Come watch or come pitch.",
       totalTickets: 80,
       remainingTickets: 80,
       eventDate: new Date("2027-06-05T18:00:00Z"),
@@ -361,7 +405,8 @@ async function seed() {
     },
     {
       name: "Batch Brew for Cafes Workshop",
-      description: "High-volume filter coffee done properly. Batch brewing equipment, ratios, holding time, and freshness.",
+      description:
+        "High-volume filter coffee done properly. Batch brewing equipment, ratios, holding time, and freshness.",
       totalTickets: 16,
       remainingTickets: 16,
       eventDate: new Date("2027-06-12T10:00:00Z"),
@@ -369,7 +414,8 @@ async function seed() {
     },
     {
       name: "Coffee & Jazz Evening",
-      description: "Live jazz quartet, three coffee flights, and good conversation. A relaxed Friday evening.",
+      description:
+        "Live jazz quartet, three coffee flights, and good conversation. A relaxed Friday evening.",
       totalTickets: 60,
       remainingTickets: 40,
       eventDate: new Date("2027-06-18T19:00:00Z"),
@@ -377,7 +423,8 @@ async function seed() {
     },
     {
       name: "Espresso Machine Maintenance Workshop",
-      description: "Backflushing, group head cleaning, gasket replacement, and knowing when to call the technician.",
+      description:
+        "Backflushing, group head cleaning, gasket replacement, and knowing when to call the technician.",
       totalTickets: 12,
       remainingTickets: 12,
       eventDate: new Date("2027-06-26T10:00:00Z"),
@@ -385,7 +432,8 @@ async function seed() {
     },
     {
       name: "Southeast Asia Coffee Origin Tour",
-      description: "Five days visiting farms in Thailand, Laos, and Myanmar. For serious coffee professionals and passionate enthusiasts.",
+      description:
+        "Five days visiting farms in Thailand, Laos, and Myanmar. For serious coffee professionals and passionate enthusiasts.",
       totalTickets: 12,
       remainingTickets: 4,
       eventDate: new Date("2027-07-10T07:00:00Z"),
@@ -393,7 +441,8 @@ async function seed() {
     },
     {
       name: "Coffee Subscription Tasting Club — July",
-      description: "Monthly gathering of our coffee subscription members. Cup this month's selections together and share notes.",
+      description:
+        "Monthly gathering of our coffee subscription members. Cup this month's selections together and share notes.",
       totalTickets: 25,
       remainingTickets: 25,
       eventDate: new Date("2027-07-17T14:00:00Z"),
@@ -401,7 +450,8 @@ async function seed() {
     },
     {
       name: "Advanced Milk Alternatives Workshop",
-      description: "Oat, almond, macadamia, and coconut — how to steam and texture plant-based milks for specialty drinks.",
+      description:
+        "Oat, almond, macadamia, and coconut — how to steam and texture plant-based milks for specialty drinks.",
       totalTickets: 16,
       remainingTickets: 16,
       eventDate: new Date("2027-07-24T10:00:00Z"),
@@ -409,7 +459,8 @@ async function seed() {
     },
     {
       name: "Cold Drip Tower Workshop",
-      description: "Build a 24-hour cold drip, dial in your variables, and understand why slow extraction produces something so different.",
+      description:
+        "Build a 24-hour cold drip, dial in your variables, and understand why slow extraction produces something so different.",
       totalTickets: 12,
       remainingTickets: 12,
       eventDate: new Date("2027-08-07T10:00:00Z"),
@@ -417,7 +468,8 @@ async function seed() {
     },
     {
       name: "Annual Bangkok Coffee Festival",
-      description: "The biggest coffee event in Southeast Asia returns. Three days of tastings, competitions, talks, and community.",
+      description:
+        "The biggest coffee event in Southeast Asia returns. Three days of tastings, competitions, talks, and community.",
       totalTickets: 1000,
       remainingTickets: 750,
       eventDate: new Date("2027-08-20T09:00:00Z"),
@@ -425,7 +477,8 @@ async function seed() {
     },
     {
       name: "Honey Process Workshop",
-      description: "Yellow, red, and black honey — how mucilage affects flavour and what it means for your brewing parameters.",
+      description:
+        "Yellow, red, and black honey — how mucilage affects flavour and what it means for your brewing parameters.",
       totalTickets: 20,
       remainingTickets: 20,
       eventDate: new Date("2027-09-04T10:00:00Z"),
@@ -433,7 +486,8 @@ async function seed() {
     },
     {
       name: "Coffee Blending Workshop",
-      description: "Why do roasters blend? Learn to build an espresso blend that's consistent, balanced, and commercially viable.",
+      description:
+        "Why do roasters blend? Learn to build an espresso blend that's consistent, balanced, and commercially viable.",
       totalTickets: 16,
       remainingTickets: 10,
       eventDate: new Date("2027-09-11T10:00:00Z"),
@@ -441,7 +495,8 @@ async function seed() {
     },
     {
       name: "Hua Hin Coffee Weekend",
-      description: "A weekend retreat combining specialty coffee workshops with beach time. Two days, eight sessions, great coffee.",
+      description:
+        "A weekend retreat combining specialty coffee workshops with beach time. Two days, eight sessions, great coffee.",
       totalTickets: 30,
       remainingTickets: 18,
       eventDate: new Date("2027-09-19T09:00:00Z"),
@@ -449,7 +504,8 @@ async function seed() {
     },
     {
       name: "Coffee & Wellness Workshop",
-      description: "The science of caffeine, sleep, cortisol, and how to optimise your coffee habit for health.",
+      description:
+        "The science of caffeine, sleep, cortisol, and how to optimise your coffee habit for health.",
       totalTickets: 30,
       remainingTickets: 30,
       eventDate: new Date("2027-09-26T10:00:00Z"),
@@ -457,7 +513,8 @@ async function seed() {
     },
     {
       name: "Roaster vs Barista: Cupping Battle",
-      description: "Thailand's top roasters and baristas face off in a blind cupping competition judged by the audience.",
+      description:
+        "Thailand's top roasters and baristas face off in a blind cupping competition judged by the audience.",
       totalTickets: 80,
       remainingTickets: 80,
       eventDate: new Date("2027-10-02T14:00:00Z"),
@@ -465,7 +522,8 @@ async function seed() {
     },
     {
       name: "Coffee Fermentation Science",
-      description: "Washed, natural, anaerobic, carbonic maceration — a deep dive into how fermentation creates flavour.",
+      description:
+        "Washed, natural, anaerobic, carbonic maceration — a deep dive into how fermentation creates flavour.",
       totalTickets: 20,
       remainingTickets: 20,
       eventDate: new Date("2027-10-09T10:00:00Z"),
@@ -473,7 +531,8 @@ async function seed() {
     },
     {
       name: "Kids Coffee Education Morning",
-      description: "Age-appropriate coffee education for young people aged 10–16. From farm to cup, no caffeine included.",
+      description:
+        "Age-appropriate coffee education for young people aged 10–16. From farm to cup, no caffeine included.",
       totalTickets: 30,
       remainingTickets: 30,
       eventDate: new Date("2027-10-16T10:00:00Z"),
@@ -481,7 +540,8 @@ async function seed() {
     },
     {
       name: "Open Mic: Coffee Stories Night",
-      description: "Baristas, farmers, and coffee lovers share their stories over cups of something exceptional.",
+      description:
+        "Baristas, farmers, and coffee lovers share their stories over cups of something exceptional.",
       totalTickets: 60,
       remainingTickets: 60,
       eventDate: new Date("2027-10-23T18:30:00Z"),
@@ -489,7 +549,8 @@ async function seed() {
     },
     {
       name: "Coffee Subscription Tasting Club — November",
-      description: "Monthly gathering of our coffee subscription members. Cup this month's selections together and share notes.",
+      description:
+        "Monthly gathering of our coffee subscription members. Cup this month's selections together and share notes.",
       totalTickets: 25,
       remainingTickets: 25,
       eventDate: new Date("2027-11-06T14:00:00Z"),
@@ -497,7 +558,8 @@ async function seed() {
     },
     {
       name: "World Coffee Research Talk",
-      description: "A talk on coffee leaf rust, climate change, and the varieties being developed to secure coffee's future.",
+      description:
+        "A talk on coffee leaf rust, climate change, and the varieties being developed to secure coffee's future.",
       totalTickets: 80,
       remainingTickets: 80,
       eventDate: new Date("2027-11-13T10:00:00Z"),
@@ -505,7 +567,8 @@ async function seed() {
     },
     {
       name: "Barista Career Workshop",
-      description: "How to build a serious career in specialty coffee — competitions, travel, opening your own place.",
+      description:
+        "How to build a serious career in specialty coffee — competitions, travel, opening your own place.",
       totalTickets: 40,
       remainingTickets: 40,
       eventDate: new Date("2027-11-20T10:00:00Z"),
@@ -521,7 +584,8 @@ async function seed() {
     },
     {
       name: "Year in Coffee: 2027 Retrospective",
-      description: "What happened in specialty coffee this year? An evening of reflection, tasting, and looking ahead.",
+      description:
+        "What happened in specialty coffee this year? An evening of reflection, tasting, and looking ahead.",
       totalTickets: 60,
       remainingTickets: 60,
       eventDate: new Date("2027-12-28T18:00:00Z"),
@@ -529,7 +593,8 @@ async function seed() {
     },
     {
       name: "Coffee Futures: Trends for 2028",
-      description: "Industry insiders share what's coming next — new processing methods, emerging origins, and consumer behaviour.",
+      description:
+        "Industry insiders share what's coming next — new processing methods, emerging origins, and consumer behaviour.",
       totalTickets: 80,
       remainingTickets: 80,
       eventDate: new Date("2028-01-08T10:00:00Z"),
@@ -537,7 +602,8 @@ async function seed() {
     },
     {
       name: "Single Origin Espresso Workshop",
-      description: "Pulling single origin shots is unforgiving. Learn to highlight origin character without losing drinkability.",
+      description:
+        "Pulling single origin shots is unforgiving. Learn to highlight origin character without losing drinkability.",
       totalTickets: 16,
       remainingTickets: 16,
       eventDate: new Date("2028-01-15T10:00:00Z"),
@@ -545,7 +611,8 @@ async function seed() {
     },
     {
       name: "Coffee & Meditation Retreat",
-      description: "A weekend of silent mornings, intentional brewing, and very good coffee. Limited to 10 participants.",
+      description:
+        "A weekend of silent mornings, intentional brewing, and very good coffee. Limited to 10 participants.",
       totalTickets: 10,
       remainingTickets: 2,
       eventDate: new Date("2028-01-24T08:00:00Z"),
@@ -553,7 +620,8 @@ async function seed() {
     },
     {
       name: "Tamper & Technique Workshop",
-      description: "Distribution, tamping angle, pressure, and why the first eight seconds of extraction matter most.",
+      description:
+        "Distribution, tamping angle, pressure, and why the first eight seconds of extraction matter most.",
       totalTickets: 12,
       remainingTickets: 12,
       eventDate: new Date("2028-02-07T10:00:00Z"),
@@ -561,7 +629,8 @@ async function seed() {
     },
     {
       name: "Coffee & Architecture Walking Tour",
-      description: "Bangkok's best cafes also happen to be in some of the city's most interesting buildings. A guided walking and tasting tour.",
+      description:
+        "Bangkok's best cafes also happen to be in some of the city's most interesting buildings. A guided walking and tasting tour.",
       totalTickets: 20,
       remainingTickets: 20,
       eventDate: new Date("2028-02-14T09:00:00Z"),
@@ -569,7 +638,8 @@ async function seed() {
     },
     {
       name: "SCA Sensory Skills Foundation",
-      description: "The official SCA Sensory Skills Foundation course. Train your palate and earn a recognised coffee credential.",
+      description:
+        "The official SCA Sensory Skills Foundation course. Train your palate and earn a recognised coffee credential.",
       totalTickets: 12,
       remainingTickets: 8,
       eventDate: new Date("2028-02-21T09:00:00Z"),
@@ -577,7 +647,8 @@ async function seed() {
     },
     {
       name: "Coffee Subscription Tasting Club — March",
-      description: "Monthly gathering of our coffee subscription members. Cup this month's selections together and share notes.",
+      description:
+        "Monthly gathering of our coffee subscription members. Cup this month's selections together and share notes.",
       totalTickets: 25,
       remainingTickets: 25,
       eventDate: new Date("2028-03-07T14:00:00Z"),
@@ -585,7 +656,8 @@ async function seed() {
     },
     {
       name: "Geisha Varietal Tasting",
-      description: "Six Geisha coffees from Panama, Ethiopia, and Colombia. The most celebrated variety in specialty coffee, explored properly.",
+      description:
+        "Six Geisha coffees from Panama, Ethiopia, and Colombia. The most celebrated variety in specialty coffee, explored properly.",
       totalTickets: 20,
       remainingTickets: 8,
       eventDate: new Date("2028-03-14T14:00:00Z"),
@@ -593,7 +665,8 @@ async function seed() {
     },
     {
       name: "Coffee & Books: Morning Reading Club",
-      description: "A slow morning reading James Hoffmann's The World Atlas of Coffee together, with a guided tasting of featured origins.",
+      description:
+        "A slow morning reading James Hoffmann's The World Atlas of Coffee together, with a guided tasting of featured origins.",
       totalTickets: 20,
       remainingTickets: 20,
       eventDate: new Date("2028-03-21T09:00:00Z"),
@@ -601,7 +674,8 @@ async function seed() {
     },
     {
       name: "Eco-Friendly Cafe Operations Workshop",
-      description: "Composting grounds, reducing waste, ethical sourcing, and making sustainability part of your cafe's identity.",
+      description:
+        "Composting grounds, reducing waste, ethical sourcing, and making sustainability part of your cafe's identity.",
       totalTickets: 25,
       remainingTickets: 25,
       eventDate: new Date("2028-03-28T10:00:00Z"),
@@ -609,7 +683,8 @@ async function seed() {
     },
     {
       name: "Pressure Profiling Masterclass",
-      description: "Lever machines, pressure profiling espresso machines, and how changing pressure through extraction changes flavour.",
+      description:
+        "Lever machines, pressure profiling espresso machines, and how changing pressure through extraction changes flavour.",
       totalTickets: 10,
       remainingTickets: 10,
       eventDate: new Date("2028-04-04T10:00:00Z"),
@@ -617,7 +692,8 @@ async function seed() {
     },
     {
       name: "Songkran Coffee Pop-Up 2028",
-      description: "Thai-inspired coffee drinks, water fights optional. A celebration of coffee and Thai New Year.",
+      description:
+        "Thai-inspired coffee drinks, water fights optional. A celebration of coffee and Thai New Year.",
       totalTickets: 100,
       remainingTickets: 100,
       eventDate: new Date("2028-04-13T10:00:00Z"),
@@ -625,7 +701,8 @@ async function seed() {
     },
     {
       name: "Coffee Label Design Workshop",
-      description: "What makes a great coffee bag? Design principles, typography, and the story your packaging tells before the first sip.",
+      description:
+        "What makes a great coffee bag? Design principles, typography, and the story your packaging tells before the first sip.",
       totalTickets: 20,
       remainingTickets: 20,
       eventDate: new Date("2028-04-18T10:00:00Z"),
@@ -633,7 +710,8 @@ async function seed() {
     },
     {
       name: "Advanced Roasting: Profile Development",
-      description: "Moving beyond following a profile — learn to develop your own based on green coffee characteristics.",
+      description:
+        "Moving beyond following a profile — learn to develop your own based on green coffee characteristics.",
       totalTickets: 10,
       remainingTickets: 6,
       eventDate: new Date("2028-04-25T09:00:00Z"),
@@ -641,7 +719,8 @@ async function seed() {
     },
     {
       name: "Coffee Tourism in Thailand Conference",
-      description: "How coffee is becoming a reason to visit Northern Thailand — farm stays, tasting trails, and agritourism.",
+      description:
+        "How coffee is becoming a reason to visit Northern Thailand — farm stays, tasting trails, and agritourism.",
       totalTickets: 80,
       remainingTickets: 80,
       eventDate: new Date("2028-05-03T09:00:00Z"),
@@ -649,7 +728,8 @@ async function seed() {
     },
     {
       name: "Thai Coffee Farmers Appreciation Dinner",
-      description: "An evening celebrating the farmers behind Thailand's specialty coffee. Proceeds go directly to farming communities.",
+      description:
+        "An evening celebrating the farmers behind Thailand's specialty coffee. Proceeds go directly to farming communities.",
       totalTickets: 60,
       remainingTickets: 40,
       eventDate: new Date("2028-05-10T18:30:00Z"),
@@ -657,7 +737,8 @@ async function seed() {
     },
     {
       name: "Immersive Coffee Tasting Experience",
-      description: "Scent, sound, and taste combined. A multisensory journey through twelve coffees from twelve countries.",
+      description:
+        "Scent, sound, and taste combined. A multisensory journey through twelve coffees from twelve countries.",
       totalTickets: 30,
       remainingTickets: 15,
       eventDate: new Date("2028-05-17T19:00:00Z"),
@@ -665,7 +746,8 @@ async function seed() {
     },
     {
       name: "Coffee Science for Beginners",
-      description: "No jargon. Just the science behind why coffee tastes the way it does — chemistry, biology, and a lot of tasting.",
+      description:
+        "No jargon. Just the science behind why coffee tastes the way it does — chemistry, biology, and a lot of tasting.",
       totalTickets: 30,
       remainingTickets: 30,
       eventDate: new Date("2028-05-24T10:00:00Z"),
@@ -673,7 +755,8 @@ async function seed() {
     },
     {
       name: "Southeast Asia Coffee Summit 2028",
-      description: "The region's premier coffee industry event. Three days of talks, trade, and tasting from across Southeast Asia.",
+      description:
+        "The region's premier coffee industry event. Three days of talks, trade, and tasting from across Southeast Asia.",
       totalTickets: 600,
       remainingTickets: 600,
       eventDate: new Date("2028-06-07T09:00:00Z"),
