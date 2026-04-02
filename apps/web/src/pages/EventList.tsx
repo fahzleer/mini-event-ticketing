@@ -37,16 +37,11 @@ export function EventList() {
             >
               <div className="flex justify-between items-start mb-2">
                 <h2 className="font-semibold text-lg leading-tight">{event.name}</h2>
-                <TicketBadge
-                  remaining={event.remainingTickets}
-                  total={event.totalTickets}
-                />
+                <TicketBadge remaining={event.remainingTickets} total={event.totalTickets} />
               </div>
 
               {event.description && (
-                <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                  {event.description}
-                </p>
+                <p className="text-sm text-gray-600 mb-3 line-clamp-2">{event.description}</p>
               )}
 
               <div className="text-xs text-gray-500 space-y-1">

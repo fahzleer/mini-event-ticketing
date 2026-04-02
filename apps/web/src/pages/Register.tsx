@@ -39,7 +39,11 @@ export function Register({ onLogin }: Props) {
   const [showPassword, setShowPassword] = useState(false)
   const [validationError, setValidationError] = useState("")
 
-  const { mutate: register, isPending, error } = useRegister((token, user) => {
+  const {
+    mutate: register,
+    isPending,
+    error,
+  } = useRegister((token, user) => {
     onLogin(token, user)
     void navigate("/")
   })
@@ -69,7 +73,9 @@ export function Register({ onLogin }: Props) {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
+            <label htmlFor="name" className="block text-sm font-medium mb-1">
+              Name
+            </label>
             <input
               id="name"
               type="text"
@@ -81,7 +87,9 @@ export function Register({ onLogin }: Props) {
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium mb-1">
+              Email
+            </label>
             <input
               id="email"
               type="email"
@@ -93,7 +101,9 @@ export function Register({ onLogin }: Props) {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium mb-1">Password</label>
+            <label htmlFor="password" className="block text-sm font-medium mb-1">
+              Password
+            </label>
             <div className="relative">
               <input
                 id="password"
@@ -111,14 +121,34 @@ export function Register({ onLogin }: Props) {
                 aria-label={showPassword ? "Hide password" : "Show password"}
               >
                 {showPassword ? (
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <title>Hide password</title>
                     <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
                     <circle cx="12" cy="12" r="3" />
                     <path d="M4 4l16 16" />
                   </svg>
                 ) : (
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <title>Show password</title>
                     <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
                     <circle cx="12" cy="12" r="3" />
@@ -131,7 +161,10 @@ export function Register({ onLogin }: Props) {
                 {RULES.map(({ label, key }) => {
                   const passed = checkPassword(form.password)[key]
                   return (
-                    <li key={key} className={`text-xs flex items-center gap-1 ${passed ? "text-green-600" : "text-gray-400"}`}>
+                    <li
+                      key={key}
+                      className={`text-xs flex items-center gap-1 ${passed ? "text-green-600" : "text-gray-400"}`}
+                    >
                       <span>{passed ? "✓" : "○"}</span>
                       {label}
                     </li>
@@ -142,9 +175,7 @@ export function Register({ onLogin }: Props) {
           </div>
 
           {(validationError || error) && (
-            <p className="text-red-600 text-sm">
-              {validationError || (error as Error).message}
-            </p>
+            <p className="text-red-600 text-sm">{validationError || (error as Error).message}</p>
           )}
 
           <button

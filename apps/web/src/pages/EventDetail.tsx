@@ -32,10 +32,7 @@ export function EventDetail() {
         {/* Header */}
         <div className="flex justify-between items-start">
           <h1 className="text-2xl font-bold">{event.name}</h1>
-          <TicketBadge
-            remaining={event.remainingTickets}
-            total={event.totalTickets}
-          />
+          <TicketBadge remaining={event.remainingTickets} total={event.totalTickets} />
         </div>
 
         {/* Details */}
@@ -51,12 +48,12 @@ export function EventDetail() {
               minute: "2-digit",
             })}
           </p>
-          <p>🎟 {event.remainingTickets} / {event.totalTickets} tickets remaining</p>
+          <p>
+            🎟 {event.remainingTickets} / {event.totalTickets} tickets remaining
+          </p>
         </div>
 
-        {event.description && (
-          <p className="text-gray-700 leading-relaxed">{event.description}</p>
-        )}
+        {event.description && <p className="text-gray-700 leading-relaxed">{event.description}</p>}
 
         <hr />
 

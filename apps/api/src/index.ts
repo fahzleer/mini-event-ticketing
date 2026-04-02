@@ -42,8 +42,7 @@ const app = new Elysia()
   // ─── Global error handler ────────────────────────────────────────────────
   // No stack traces leaked — only structured error responses
   .onError(({ error, set }) => {
-    const message =
-      error instanceof Error ? error.message : "INTERNAL_SERVER_ERROR"
+    const message = error instanceof Error ? error.message : "INTERNAL_SERVER_ERROR"
     const mapped = ERROR_MAP[message]
 
     set.status = mapped?.status ?? 500

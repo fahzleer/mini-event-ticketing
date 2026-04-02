@@ -18,10 +18,6 @@ export const bookingRoutes = new Elysia({ prefix: "/bookings" })
       throw new Error("VALIDATION_ERROR")
     }
 
-    const booking = await BookingService.book(
-      userId,
-      input.eventId,
-      input.quantity
-    )
+    const booking = await BookingService.book(userId, input.eventId, input.quantity)
     return { success: true, data: booking }
   })

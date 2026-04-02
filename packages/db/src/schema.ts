@@ -1,13 +1,5 @@
 import { relations, sql } from "drizzle-orm"
-import {
-  check,
-  integer,
-  pgEnum,
-  pgTable,
-  timestamp,
-  uuid,
-  varchar,
-} from "drizzle-orm/pg-core"
+import { check, integer, pgEnum, pgTable, timestamp, uuid, varchar } from "drizzle-orm/pg-core"
 
 // ─── Users ──────────────────────────────────────────────────────────────────
 
@@ -36,20 +28,14 @@ export const events = pgTable(
   (table) => [
     // Layer 3: DB constraint — absolute last line of defense against oversell
     check("remaining_non_negative", sql`${table.remainingTickets} >= 0`),
-    check(
-      "remaining_lte_total",
-      sql`${table.remainingTickets} <= ${table.totalTickets}`
-    ),
+    check("remaining_lte_total", sql`${table.remainingTickets} <= ${table.totalTickets}`),
     check("total_tickets_positive", sql`${table.totalTickets} > 0`),
   ]
 )
 
 // ─── Bookings ────────────────────────────────────────────────────────────────
 
-export const bookingStatusEnum = pgEnum("booking_status", [
-  "confirmed",
-  "cancelled",
-])
+export const bookingStatusEnum = pgEnum("booking_status", ["confirmed", "cancelled"])
 
 export const bookings = pgTable("bookings", {
   id: uuid("id").primaryKey().defaultRandom(),

@@ -47,7 +47,6 @@ afterAll(async () => {
 // ─── Concurrency Tests ────────────────────────────────────────────────────────
 
 describe("Concurrency: No Oversell", () => {
-
   it("100 concurrent bookings on 10-ticket event → exactly 10 succeed", async () => {
     const event = await createTestEvent(10)
     const testUsers = await Promise.all(Array.from({ length: 100 }, (_, i) => createTestUser(i)))

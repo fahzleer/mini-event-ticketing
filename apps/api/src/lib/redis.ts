@@ -19,20 +19,10 @@ redis.on("connect", () => {
 
 const LOCK_PREFIX = "lock:"
 
-export async function acquireLock(
-  key: string,
-  ttlMs = 5000,
-  waitMs = ttlMs
-): Promise<boolean> {
+export async function acquireLock(key: string, ttlMs = 5000, waitMs = ttlMs): Promise<boolean> {
   const deadline = Date.now() + waitMs
   while (Date.now() < deadline) {
-    const result = await redis.set(
-      `${LOCK_PREFIX}${key}`,
-      "1",
-      "PX",
-      ttlMs,
-      "NX"
-    )
+    const result = await redis.set(`${LOCK_PREFIX}${key}`, "1", "PX", ttlMs, "NX")
     if (result === "OK") return true
     await new Promise((resolve) => setTimeout(resolve, 50))
   }

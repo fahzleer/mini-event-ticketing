@@ -14,9 +14,7 @@ export const authMiddleware = new Elysia({ name: "auth" })
   .use(jwtPlugin)
   .derive({ as: "scoped" }, async ({ jwt, headers, set }) => {
     const authHeader = headers.authorization
-    const token = authHeader?.startsWith("Bearer ")
-      ? authHeader.slice(7)
-      : undefined
+    const token = authHeader?.startsWith("Bearer ") ? authHeader.slice(7) : undefined
 
     if (!token) {
       set.status = 401

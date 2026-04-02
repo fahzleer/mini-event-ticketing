@@ -27,11 +27,7 @@ export function AppRouter({ user, onLogin, onLogout }: Props) {
               <a href="/dashboard" className="text-gray-700 hover:text-blue-600">
                 Dashboard
               </a>
-              <button
-                type="button"
-                onClick={onLogout}
-                className="text-gray-500 hover:text-red-600"
-              >
+              <button type="button" onClick={onLogout} className="text-gray-500 hover:text-red-600">
                 Log out
               </button>
             </>
@@ -61,9 +57,7 @@ export function AppRouter({ user, onLogin, onLogout }: Props) {
           <Route path="/events/:id" element={<EventDetail />} />
           <Route
             path="/dashboard"
-            element={
-              user ? <Dashboard user={user} /> : <Navigate to="/login" replace />
-            }
+            element={user ? <Dashboard user={user} /> : <Navigate to="/login" replace />}
           />
         </Route>
 

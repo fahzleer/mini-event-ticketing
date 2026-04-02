@@ -11,7 +11,11 @@ export function Login({ onLogin }: Props) {
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
 
-  const { mutate: login, isPending, error } = useLogin((token, user) => {
+  const {
+    mutate: login,
+    isPending,
+    error,
+  } = useLogin((token, user) => {
     onLogin(token, user)
     void navigate("/")
   })
@@ -28,7 +32,9 @@ export function Login({ onLogin }: Props) {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium mb-1">
+              Email
+            </label>
             <input
               id="email"
               type="email"
@@ -40,7 +46,9 @@ export function Login({ onLogin }: Props) {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium mb-1">Password</label>
+            <label htmlFor="password" className="block text-sm font-medium mb-1">
+              Password
+            </label>
             <div className="relative">
               <input
                 id="password"
@@ -58,14 +66,34 @@ export function Login({ onLogin }: Props) {
                 aria-label={showPassword ? "Hide password" : "Show password"}
               >
                 {showPassword ? (
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <title>Hide password</title>
                     <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
                     <circle cx="12" cy="12" r="3" />
                     <path d="M4 4l16 16" />
                   </svg>
                 ) : (
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <title>Show password</title>
                     <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
                     <circle cx="12" cy="12" r="3" />
@@ -75,11 +103,7 @@ export function Login({ onLogin }: Props) {
             </div>
           </div>
 
-          {error && (
-            <p className="text-red-600 text-sm">
-              {(error as Error).message}
-            </p>
-          )}
+          {error && <p className="text-red-600 text-sm">{(error as Error).message}</p>}
 
           <button
             type="submit"

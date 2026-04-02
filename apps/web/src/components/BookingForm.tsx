@@ -41,11 +41,7 @@ export function BookingForm({ event }: Props) {
   }
 
   if (isSoldOut) {
-    return (
-      <div className="p-4 bg-gray-100 rounded text-center text-gray-500">
-        Sold out
-      </div>
-    )
+    return <div className="p-4 bg-gray-100 rounded text-center text-gray-500">Sold out</div>
   }
 
   if (isLimitReached) {
@@ -82,13 +78,9 @@ export function BookingForm({ event }: Props) {
         <span className="text-sm text-gray-500">Max {maxAllowed}</span>
       </div>
 
-      {errorMessage && (
-        <p className="text-red-600 text-sm">{errorMessage}</p>
-      )}
+      {errorMessage && <p className="text-red-600 text-sm">{errorMessage}</p>}
 
-      {successMsg && (
-        <p className="text-green-600 text-sm font-medium">{successMsg}</p>
-      )}
+      {successMsg && <p className="text-green-600 text-sm font-medium">{successMsg}</p>}
 
       <button
         type="submit"

@@ -13,15 +13,12 @@ export const AuthService = {
     // Bun built-in password hashing (bcrypt)
     const hashed = await Bun.password.hash(pw)
 
-    const [user] = await db
-      .insert(users)
-      .values({ email, name, password: hashed })
-      .returning({
-        id: users.id,
-        email: users.email,
-        name: users.name,
-        createdAt: users.createdAt,
-      })
+    const [user] = await db.insert(users).values({ email, name, password: hashed }).returning({
+      id: users.id,
+      email: users.email,
+      name: users.name,
+      createdAt: users.createdAt,
+    })
 
     if (!user) throw new Error("REGISTER_FAILED")
     return user

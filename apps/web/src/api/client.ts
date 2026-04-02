@@ -32,34 +32,23 @@ api.interceptors.response.use(
 export const authApi = {
   register: (data: RegisterInput) =>
     api
-      .post<{ success: true; data: { token: string; user: User } }>(
-        "/auth/register",
-        data
-      )
+      .post<{ success: true; data: { token: string; user: User } }>("/auth/register", data)
       .then((r) => r.data.data),
 
   login: (data: LoginInput) =>
     api
-      .post<{ success: true; data: { token: string; user: User } }>(
-        "/auth/login",
-        data
-      )
+      .post<{ success: true; data: { token: string; user: User } }>("/auth/login", data)
       .then((r) => r.data.data),
 }
 
 // ─── Events ──────────────────────────────────────────────────────────────────
 
 export const eventApi = {
-  list: () =>
-    api
-      .get<{ success: true; data: Event[] }>("/events")
-      .then((r) => r.data.data),
+  list: () => api.get<{ success: true; data: Event[] }>("/events").then((r) => r.data.data),
 
   detail: (id: string) =>
     api
-      .get<{ success: true; data: Event & { myBookedCount: number } }>(
-        `/events/${id}`
-      )
+      .get<{ success: true; data: Event & { myBookedCount: number } }>(`/events/${id}`)
       .then((r) => r.data.data),
 }
 
@@ -67,12 +56,7 @@ export const eventApi = {
 
 export const bookingApi = {
   book: (data: BookingInput) =>
-    api
-      .post<{ success: true; data: Booking }>("/bookings", data)
-      .then((r) => r.data.data),
+    api.post<{ success: true; data: Booking }>("/bookings", data).then((r) => r.data.data),
 
-  mine: () =>
-    api
-      .get<{ success: true; data: Booking[] }>("/bookings/my")
-      .then((r) => r.data.data),
+  mine: () => api.get<{ success: true; data: Booking[] }>("/bookings/my").then((r) => r.data.data),
 }

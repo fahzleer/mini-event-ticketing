@@ -37,11 +37,7 @@ export const BookingService = {
       // ── Layer C: DB Transaction + SELECT FOR UPDATE ─────────────────────────
       return await db.transaction(async (tx) => {
         // Lock the event row — no other transaction can read/write until commit
-        const [event] = await tx
-          .select()
-          .from(events)
-          .where(eq(events.id, eventId))
-          .for("update")
+        const [event] = await tx.select().from(events).where(eq(events.id, eventId)).for("update")
 
         if (!event) throw new Error("EVENT_NOT_FOUND")
         if (event.remainingTickets < quantity) throw new Error("NOT_ENOUGH_TICKETS")
@@ -89,10 +85,7 @@ export const BookingService = {
 
   async getMyBookings(userId: string) {
     return db.query.bookings.findMany({
-      where: and(
-        eq(bookings.userId, userId),
-        eq(bookings.status, "confirmed")
-      ),
+      where: and(eq(bookings.userId, userId), eq(bookings.status, "confirmed")),
       with: { event: true },
       orderBy: (b) => [desc(b.createdAt)],
     })
