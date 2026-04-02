@@ -1,5 +1,5 @@
+import type { Booking, BookingInput, Event, LoginInput, RegisterInput, User } from "@repo/types"
 import axios from "axios"
-import type { BookingInput, Event, LoginInput, RegisterInput, User, Booking } from "@repo/types"
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL ?? "http://localhost:3000",

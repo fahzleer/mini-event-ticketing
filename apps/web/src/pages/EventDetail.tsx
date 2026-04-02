@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router"
-import { useEvent } from "../hooks/useEvents"
 import { BookingForm } from "../components/BookingForm"
 import { TicketBadge } from "../components/TicketBadge"
+import { useEvent } from "../hooks/useEvents"
 
 export function EventDetail() {
   const { id } = useParams<{ id: string }>()

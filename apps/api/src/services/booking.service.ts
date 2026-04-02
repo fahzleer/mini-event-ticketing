@@ -1,5 +1,5 @@
 import { db } from "@repo/db"
-import { bookings, events } from "@repo/db/schema"
+import { events, bookings } from "@repo/db/schema"
 import { and, desc, eq, sum } from "drizzle-orm"
 import { sql } from "drizzle-orm"
 import { acquireLock, releaseLock } from "../lib/redis"

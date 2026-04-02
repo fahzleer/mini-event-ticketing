@@ -1,6 +1,6 @@
 pre-commit:
   commands:
     format:
-      run: bun format
+      run: bun x biome check --write .
     lint:
-      run: bun lint
+      run: bun x biome check .

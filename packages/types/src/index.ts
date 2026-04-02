@@ -8,9 +8,9 @@ export {
 
 export type { RegisterInput, LoginInput, BookingInput } from "./schemas"
 
+import type { events, bookings, users } from "@repo/db/schema"
 // Response types — inferred from Drizzle schema (single source of truth)
 import type { InferSelectModel } from "drizzle-orm"
-import type { users, events, bookings } from "@repo/db/schema"
 
 export type User = Omit<InferSelectModel<typeof users>, "password">
 export type Event = InferSelectModel<typeof events>

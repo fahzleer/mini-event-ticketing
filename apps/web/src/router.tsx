@@ -1,5 +1,5 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router"
 import type { User } from "@repo/types"
+import { BrowserRouter, Navigate, Route, Routes } from "react-router"
 import { PrivateRoute } from "./components/PrivateRoute"
 import { Dashboard } from "./pages/Dashboard"
 import { EventDetail } from "./pages/EventDetail"

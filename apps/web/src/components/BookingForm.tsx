@@ -1,5 +1,5 @@
-import { useState } from "react"
 import type { Event } from "@repo/types"
+import { useState } from "react"
 import { useBook } from "../hooks/useBooking"
 
 const MAX_PER_USER = 5

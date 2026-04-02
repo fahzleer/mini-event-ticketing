@@ -1,6 +1,6 @@
 import { Link } from "react-router"
-import { useEvents } from "../hooks/useEvents"
 import { TicketBadge } from "../components/TicketBadge"
+import { useEvents } from "../hooks/useEvents"
 
 export function EventList() {
   const { data: events, isLoading, error } = useEvents()

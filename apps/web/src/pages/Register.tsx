@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { Link, useNavigate } from "react-router"
-import { type } from "arktype"
 import { RegisterSchema } from "@repo/types"
 import type { User } from "@repo/types"
+import { type } from "arktype"
+import { useState } from "react"
+import { Link, useNavigate } from "react-router"
 import { useRegister } from "../hooks/useAuth"
 
 type PasswordValidation = {

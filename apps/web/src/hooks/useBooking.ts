@@ -1,6 +1,6 @@
+import type { BookingInput } from "@repo/types"
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
 import { bookingApi } from "../api/client"
-import type { BookingInput } from "@repo/types"
 
 export function useMyBookings() {
   return useQuery({

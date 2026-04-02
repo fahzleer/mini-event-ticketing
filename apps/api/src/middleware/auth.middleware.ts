@@ -1,5 +1,5 @@
-import { Elysia } from "elysia"
 import { jwt } from "@elysiajs/jwt"
+import { Elysia } from "elysia"
 
 const JWT_SECRET = Bun.env.JWT_SECRET ?? "dev-secret-change-in-production"
 

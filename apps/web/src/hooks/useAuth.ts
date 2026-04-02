@@ -1,7 +1,7 @@
+import type { LoginInput, RegisterInput, User } from "@repo/types"
 import { useMutation } from "@tanstack/react-query"
 import { useEffect, useState } from "react"
 import { authApi } from "../api/client"
-import type { LoginInput, RegisterInput, User } from "@repo/types"
 
 type AuthMessage = { type: "LOGIN"; user: User } | { type: "LOGOUT" }
 

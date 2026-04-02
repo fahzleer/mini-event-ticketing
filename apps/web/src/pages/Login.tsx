@@ -1,6 +1,6 @@
+import type { User } from "@repo/types"
 import { useState } from "react"
 import { Link, useNavigate } from "react-router"
-import type { User } from "@repo/types"
 import { useLogin } from "../hooks/useAuth"
 
 type Props = { onLogin: (token: string, user: User) => void }

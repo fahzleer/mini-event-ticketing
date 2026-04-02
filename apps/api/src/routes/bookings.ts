@@ -1,6 +1,6 @@
-import { Elysia } from "elysia"
-import { type } from "arktype"
 import { BookingSchema } from "@repo/types"
+import { type } from "arktype"
+import { Elysia } from "elysia"
 import { authMiddleware } from "../middleware/auth.middleware"
 import { BookingService } from "../services/booking.service"
 

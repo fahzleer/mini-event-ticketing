@@ -1,6 +1,6 @@
+import type { User } from "@repo/types"
 import { Link } from "react-router"
 import { useMyBookings } from "../hooks/useBooking"
-import type { User } from "@repo/types"
 
 type Props = { user: User }
 
@@ -39,7 +39,11 @@ export function Dashboard({ user }: Props) {
             const key = booking.event.id
             const existing = acc[key]
             if (!existing) {
-              acc[key] = { event: booking.event, totalQuantity: booking.quantity, latestDate: booking.createdAt }
+              acc[key] = {
+                event: booking.event,
+                totalQuantity: booking.quantity,
+                latestDate: booking.createdAt,
+              }
               return acc
             }
             existing.totalQuantity += booking.quantity
