@@ -4,5 +4,8 @@ nixPkgs = ["bun"]
 [phases.install]
 cmds = ["bun install"]
 
+[phases.build]
+cmds = []
+
 [start]
 cmd = "cd apps/api && bun ../../packages/db/src/migrate.ts && bun src/index.ts"
