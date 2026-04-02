@@ -29,8 +29,14 @@ const ERROR_MAP: Record<string, { status: number; message: string }> = {
 
 const PORT = Number(process.env.PORT ?? 3000)
 
+// CORS_ORIGIN defaults to "*" for local dev.
+// In production set CORS_ORIGIN=https://your-frontend.vercel.app to restrict access.
+// Redis distributed lock is intentionally used instead of in-memory mutex so the
+// service can scale horizontally to multiple instances without race conditions.
+const CORS_ORIGIN = process.env.CORS_ORIGIN ?? "*"
+
 const app = new Elysia()
-  .use(cors({ origin: "*", credentials: true }))
+  .use(cors({ origin: CORS_ORIGIN, credentials: true }))
   .use(
     swagger({
       path: "/docs",
