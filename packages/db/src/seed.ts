@@ -12,7 +12,7 @@ async function seed() {
       description:
         "Thailand's largest coffee festival featuring over 100 roasters, barista competitions, and cupping sessions from across Southeast Asia.",
       totalTickets: 500,
-      remainingTickets: 500,
+      remainingTickets: 42,
       eventDate: new Date("2026-06-15T09:00:00Z"),
       venue: "BITEC Bang Na, Bangkok",
     },
@@ -21,7 +21,7 @@ async function seed() {
       description:
         "Learn to taste coffee like a pro. We'll cup 12 single origins and you'll leave knowing exactly what you like and why.",
       totalTickets: 20,
-      remainingTickets: 20,
+      remainingTickets: 0,
       eventDate: new Date("2026-07-05T09:00:00Z"),
       venue: "Roots Coffee, Bangkok",
     },
@@ -66,7 +66,7 @@ async function seed() {
       description:
         "Watch Thailand's top baristas compete for a place at the national finals. Espresso, milk, and signature drink rounds.",
       totalTickets: 200,
-      remainingTickets: 120,
+      remainingTickets: 14,
       eventDate: new Date("2026-08-15T09:00:00Z"),
       venue: "Siam Paragon, Bangkok",
     },
@@ -147,7 +147,7 @@ async function seed() {
       description:
         "Celebrating the women shaping specialty coffee across farming, roasting, and service in Southeast Asia.",
       totalTickets: 100,
-      remainingTickets: 100,
+      remainingTickets: 0,
       eventDate: new Date("2026-10-24T09:00:00Z"),
       venue: "TCDC, Bangkok",
     },
@@ -372,7 +372,7 @@ async function seed() {
       description:
         "The best baristas in Thailand compete for the national title and a place at the World Barista Championship.",
       totalTickets: 400,
-      remainingTickets: 250,
+      remainingTickets: 28,
       eventDate: new Date("2027-05-08T09:00:00Z"),
       venue: "BITEC Bang Na, Bangkok",
     },
@@ -471,7 +471,7 @@ async function seed() {
       description:
         "The biggest coffee event in Southeast Asia returns. Three days of tastings, competitions, talks, and community.",
       totalTickets: 1000,
-      remainingTickets: 750,
+      remainingTickets: 0,
       eventDate: new Date("2027-08-20T09:00:00Z"),
       venue: "BITEC Bang Na, Bangkok",
     },
@@ -758,7 +758,7 @@ async function seed() {
       description:
         "The region's premier coffee industry event. Three days of talks, trade, and tasting from across Southeast Asia.",
       totalTickets: 600,
-      remainingTickets: 600,
+      remainingTickets: 52,
       eventDate: new Date("2028-06-07T09:00:00Z"),
       venue: "BITEC Bang Na, Bangkok",
     },
