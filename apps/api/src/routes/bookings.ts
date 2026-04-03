@@ -1,6 +1,7 @@
 import { BookingSchema } from "@repo/types"
 import { type } from "arktype"
 import { Elysia } from "elysia"
+import { checkRateLimit } from "../lib/redis"
 import { authMiddleware } from "../middleware/auth.middleware"
 import { BookingService } from "../services/booking.service"
 
@@ -13,6 +14,9 @@ export const bookingRoutes = new Elysia({ prefix: "/bookings" })
     return { success: true, data }
   })
   .post("/", async ({ body, userId }) => {
+    // Rate limit: 10 booking attempts per minute per user
+    await checkRateLimit(`booking:${userId}`, 10, 60)
+
     const input = BookingSchema(body)
     if (input instanceof type.errors) {
       throw new Error("VALIDATION_ERROR")

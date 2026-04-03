@@ -1,5 +1,6 @@
 import { jwt } from "@elysiajs/jwt"
 import { Elysia } from "elysia"
+import { isTokenBlacklisted } from "../lib/redis"
 
 const JWT_SECRET = Bun.env.JWT_SECRET ?? "dev-secret-change-in-production"
 
@@ -21,6 +22,11 @@ export const authMiddleware = new Elysia({ name: "auth" })
       throw new Error("UNAUTHORIZED")
     }
 
+    if (await isTokenBlacklisted(token)) {
+      set.status = 401
+      throw new Error("TOKEN_REVOKED")
+    }
+
     const payload = await jwt.verify(token)
 
     if (!payload || typeof payload.userId !== "string") {
@@ -28,5 +34,5 @@ export const authMiddleware = new Elysia({ name: "auth" })
       throw new Error("TOKEN_INVALID")
     }
 
-    return { userId: payload.userId }
+    return { userId: payload.userId, token }
   })
