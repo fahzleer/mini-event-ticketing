@@ -37,7 +37,7 @@ async function createTestUser(index: number) {
 // ─── Redis lifecycle ──────────────────────────────────────────────────────────
 
 beforeAll(async () => {
-  await redis.connect()
+  if (redis.status === "wait") await redis.connect()
 })
 
 afterAll(async () => {
