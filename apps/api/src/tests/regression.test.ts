@@ -41,14 +41,12 @@ async function createTestUser(email?: string) {
 }
 
 // ─── Redis lifecycle ──────────────────────────────────────────────────────────
+// lazyConnect: true in redis.ts — connection is established automatically on
+// first command. Do not call redis.quit() here: both test files share the same
+// Redis singleton and quitting in one file closes the connection for the other.
 
 beforeAll(async () => {
-  // Guard against "already connecting" when bun test runs multiple test files
   if (redis.status === "wait") await redis.connect()
-})
-
-afterAll(async () => {
-  await redis.quit()
 })
 
 // ─── AuthService Regression ───────────────────────────────────────────────────

@@ -35,13 +35,12 @@ async function createTestUser(index: number) {
 }
 
 // ─── Redis lifecycle ──────────────────────────────────────────────────────────
+// lazyConnect: true in redis.ts — connection is established automatically on
+// first command. Do not call redis.quit() here: both test files share the same
+// Redis singleton and quitting in one file closes the connection for the other.
 
 beforeAll(async () => {
   if (redis.status === "wait") await redis.connect()
-})
-
-afterAll(async () => {
-  await redis.quit()
 })
 
 // ─── Concurrency Tests ────────────────────────────────────────────────────────
