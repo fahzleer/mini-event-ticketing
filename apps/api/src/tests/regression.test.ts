@@ -1,4 +1,4 @@
-import { afterAll, beforeAll, describe, expect, it } from "bun:test"
+import { beforeAll, describe, expect, it } from "bun:test"
 import { db } from "@repo/db"
 import { events, bookings, users } from "@repo/db/schema"
 import { eq } from "drizzle-orm"
