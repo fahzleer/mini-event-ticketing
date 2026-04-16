@@ -43,7 +43,8 @@ async function createTestUser(email?: string) {
 // ─── Redis lifecycle ──────────────────────────────────────────────────────────
 
 beforeAll(async () => {
-  await redis.connect()
+  // Guard against "already connecting" when bun test runs multiple test files
+  if (redis.status === "wait") await redis.connect()
 })
 
 afterAll(async () => {
@@ -90,8 +91,8 @@ describe("AuthService — register", () => {
 
     const [row] = await db.select().from(users).where(eq(users.id, user.id))
     expect(row?.password).not.toBe(plaintext)
-    // Bun bcrypt hashes start with $2b$
-    expect(row?.password).toMatch(/^\$2b\$/)
+    // Bun.password.hash() defaults to argon2id
+    expect(row?.password).toMatch(/^\$argon2id\$/)
 
     // Cleanup
     await db.delete(users).where(eq(users.id, user.id))
