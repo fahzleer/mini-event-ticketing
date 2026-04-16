@@ -8,7 +8,10 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "lint": "biome check src"
+    "lint": "biome check src",
+    "test:e2e": "bunx playwright test",
+    "test:e2e:ui": "bunx playwright test --ui",
+    "test:e2e:report": "bunx playwright show-report"
   },
   "dependencies": {
     "@repo/types": "workspace:*",
@@ -20,8 +23,10 @@
     "react-router": "^7.1.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
     "@repo/tsconfig": "workspace:*",
     "@tailwindcss/vite": "^4.2.2",
+    "@types/node": "^25.6.0",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react": "^4.3.4",

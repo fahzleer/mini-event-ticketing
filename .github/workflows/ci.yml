@@ -64,4 +64,4 @@ jobs:
         run: bun db:migrate
 
       - name: Test
-        run: bun test
+        run: bun test apps/api/src/tests
