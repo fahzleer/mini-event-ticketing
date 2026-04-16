@@ -31,9 +31,7 @@ test.describe("Booking rate limiting", () => {
     // Fire RATE_LIMIT requests (these may succeed or fail for booking reasons
     // but must NOT return RATE_LIMITED yet)
     const firstBatch = await Promise.all(
-      Array.from({ length: RATE_LIMIT }, () =>
-        bookTickets(token, target.id, 1)
-      )
+      Array.from({ length: RATE_LIMIT }, () => bookTickets(token, target.id, 1))
     )
 
     const prematureRateLimit = firstBatch.some(
@@ -69,9 +67,7 @@ test.describe("Booking rate limiting", () => {
     }
 
     const firstBatch = await Promise.all(
-      Array.from({ length: RATE_LIMIT }, () =>
-        bookTickets(token, target.id, 1)
-      )
+      Array.from({ length: RATE_LIMIT }, () => bookTickets(token, target.id, 1))
     )
 
     const prematureRateLimit = firstBatch.some(
@@ -84,10 +80,7 @@ test.describe("Booking rate limiting", () => {
   })
 
   test("TC-RL-03 — Rate limit is per user: User A exhausted quota does not affect User B", async () => {
-    const [authA, authB] = await Promise.all([
-      register(uniqueEmail()),
-      register(uniqueEmail()),
-    ])
+    const [authA, authB] = await Promise.all([register(uniqueEmail()), register(uniqueEmail())])
 
     const events = await listEvents(authA.token)
     const target = events
@@ -101,9 +94,7 @@ test.describe("Booking rate limiting", () => {
 
     // Exhaust user A's quota
     await Promise.all(
-      Array.from({ length: RATE_LIMIT }, () =>
-        bookTickets(authA.token, target.id, 1)
-      )
+      Array.from({ length: RATE_LIMIT }, () => bookTickets(authA.token, target.id, 1))
     )
     const aThrottled = await bookTickets(authA.token, target.id, 1)
     expect((aThrottled as { code: string }).code).toBe("RATE_LIMITED")

@@ -2,11 +2,7 @@ import { expect, test } from "@playwright/test"
 import { bookTickets, listEvents, register, uniqueEmail } from "./helpers/api"
 
 /** Seed localStorage so the SPA treats this session as authenticated. */
-async function seedAuth(
-  page: import("@playwright/test").Page,
-  token: string,
-  user: object
-) {
+async function seedAuth(page: import("@playwright/test").Page, token: string, user: object) {
   await page.goto("/login")
   await page.evaluate(
     ({ t, u }) => {
@@ -29,7 +25,9 @@ test.describe("Event Browsing", () => {
 
     await expect(page.getByRole("main")).toBeVisible()
     // At least one event card must be rendered
-    await expect(page.locator("[data-testid='event-card'], .event-card, article").first()).toBeVisible()
+    await expect(
+      page.locator("[data-testid='event-card'], .event-card, article").first()
+    ).toBeVisible()
   })
 
   test("TC-EVT-02 — Available badge (green)", async ({ page }) => {

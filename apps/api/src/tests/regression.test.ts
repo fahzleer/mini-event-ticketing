@@ -1,6 +1,6 @@
 import { afterAll, beforeAll, describe, expect, it } from "bun:test"
 import { db } from "@repo/db"
-import { bookings, events, users } from "@repo/db/schema"
+import { events, bookings, users } from "@repo/db/schema"
 import { eq } from "drizzle-orm"
 import { redis } from "../lib/redis"
 import { AuthService } from "../services/auth.service"
@@ -115,11 +115,15 @@ describe("AuthService — login", () => {
 
   it("TC-LOGIN-02 — Wrong password throws INVALID_CREDENTIALS", async () => {
     const email = uniqueEmail()
-    const registered = await AuthService.register({ email, name: "Login User", password: "Password1!" })
+    const registered = await AuthService.register({
+      email,
+      name: "Login User",
+      password: "Password1!",
+    })
 
-    await expect(
-      AuthService.login({ email, password: "WrongPassword1!" })
-    ).rejects.toThrow("INVALID_CREDENTIALS")
+    await expect(AuthService.login({ email, password: "WrongPassword1!" })).rejects.toThrow(
+      "INVALID_CREDENTIALS"
+    )
 
     // Cleanup
     await db.delete(users).where(eq(users.id, registered.id))
@@ -151,11 +155,21 @@ describe("EventService — findAll", () => {
   it("TC-EVT-SVC-01 — Returns at least the events created for this test, ordered by eventDate ASC", async () => {
     const earlier = await db
       .insert(events)
-      .values({ name: "Earlier Event", totalTickets: 10, remainingTickets: 10, eventDate: new Date("2099-01-01") })
+      .values({
+        name: "Earlier Event",
+        totalTickets: 10,
+        remainingTickets: 10,
+        eventDate: new Date("2099-01-01"),
+      })
       .returning()
     const later = await db
       .insert(events)
-      .values({ name: "Later Event", totalTickets: 10, remainingTickets: 10, eventDate: new Date("2099-06-01") })
+      .values({
+        name: "Later Event",
+        totalTickets: 10,
+        remainingTickets: 10,
+        eventDate: new Date("2099-06-01"),
+      })
       .returning()
 
     const earlierId = earlier[0]?.id
@@ -212,8 +226,12 @@ describe("EventService — findById", () => {
     const user = await createTestUser()
 
     // Create 2 confirmed bookings with quantity 2 and 1 → total = 3
-    await db.insert(bookings).values({ userId: user.id, eventId: event.id, quantity: 2, status: "confirmed" })
-    await db.insert(bookings).values({ userId: user.id, eventId: event.id, quantity: 1, status: "confirmed" })
+    await db
+      .insert(bookings)
+      .values({ userId: user.id, eventId: event.id, quantity: 2, status: "confirmed" })
+    await db
+      .insert(bookings)
+      .values({ userId: user.id, eventId: event.id, quantity: 1, status: "confirmed" })
 
     const result = await EventService.findById(event.id, user.id)
 
@@ -229,8 +247,12 @@ describe("EventService — findById", () => {
     const event = await createTestEvent(100)
     const user = await createTestUser()
 
-    await db.insert(bookings).values({ userId: user.id, eventId: event.id, quantity: 3, status: "confirmed" })
-    await db.insert(bookings).values({ userId: user.id, eventId: event.id, quantity: 2, status: "cancelled" })
+    await db
+      .insert(bookings)
+      .values({ userId: user.id, eventId: event.id, quantity: 3, status: "confirmed" })
+    await db
+      .insert(bookings)
+      .values({ userId: user.id, eventId: event.id, quantity: 2, status: "cancelled" })
 
     const result = await EventService.findById(event.id, user.id)
 
@@ -255,8 +277,12 @@ describe("EventService — findById", () => {
     const userB = await createTestUser()
 
     // User B books 3 tickets; User A books 1
-    await db.insert(bookings).values({ userId: userB.id, eventId: event.id, quantity: 3, status: "confirmed" })
-    await db.insert(bookings).values({ userId: userA.id, eventId: event.id, quantity: 1, status: "confirmed" })
+    await db
+      .insert(bookings)
+      .values({ userId: userB.id, eventId: event.id, quantity: 3, status: "confirmed" })
+    await db
+      .insert(bookings)
+      .values({ userId: userA.id, eventId: event.id, quantity: 1, status: "confirmed" })
 
     const result = await EventService.findById(event.id, userA.id)
 

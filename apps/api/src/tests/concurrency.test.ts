@@ -154,9 +154,7 @@ describe("Business Rules: 5-Ticket Limit", () => {
     const event = await createTestEvent(100)
     const user = await createTestUser(320)
 
-    await expect(
-      BookingService.book(user.id, event.id, 6)
-    ).rejects.toThrow("LIMIT_EXCEEDED")
+    await expect(BookingService.book(user.id, event.id, 6)).rejects.toThrow("LIMIT_EXCEEDED")
 
     // Cleanup
     await db.delete(events).where(eq(events.id, event.id))
@@ -169,9 +167,7 @@ describe("Business Rules: 5-Ticket Limit", () => {
 
     await BookingService.book(user.id, event.id, 3)
 
-    await expect(
-      BookingService.book(user.id, event.id, 3)
-    ).rejects.toThrow("LIMIT_EXCEEDED")
+    await expect(BookingService.book(user.id, event.id, 3)).rejects.toThrow("LIMIT_EXCEEDED")
 
     // Cleanup
     await db.delete(bookings).where(eq(bookings.eventId, event.id))
@@ -186,9 +182,7 @@ describe("Business Rules: 5-Ticket Limit", () => {
     await BookingService.book(user.id, event.id, 3)
     await BookingService.book(user.id, event.id, 2)
 
-    await expect(
-      BookingService.book(user.id, event.id, 1)
-    ).rejects.toThrow("LIMIT_EXCEEDED")
+    await expect(BookingService.book(user.id, event.id, 1)).rejects.toThrow("LIMIT_EXCEEDED")
 
     // Cleanup
     await db.delete(bookings).where(eq(bookings.eventId, event.id))

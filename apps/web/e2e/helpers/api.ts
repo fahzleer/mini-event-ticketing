@@ -4,8 +4,7 @@
  * raw assertions against the backend (things you can't verify with naked eyes).
  */
 
-export const API_URL =
-  process.env.API_URL ?? "https://mini-event-ticketing-api.up.railway.app"
+export const API_URL = process.env.API_URL ?? "https://mini-event-ticketing-api.up.railway.app"
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -39,10 +38,7 @@ export async function register(
 }
 
 /** Login and return tokens + user. */
-export async function login(
-  email: string,
-  password = "Test1234!"
-): Promise<AuthResponse["data"]> {
+export async function login(email: string, password = "Test1234!"): Promise<AuthResponse["data"]> {
   const res = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -71,7 +67,9 @@ export async function refreshTokens(
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ refreshToken }),
   })
-  const json = (await res.json()) as { success: true; data: { token: string; refreshToken: string } } | ApiError
+  const json = (await res.json()) as
+    | { success: true; data: { token: string; refreshToken: string } }
+    | ApiError
   if (!json.success) throw new Error(`Refresh failed: ${(json as ApiError).code}`)
   return (json as { success: true; data: { token: string; refreshToken: string } }).data
 }

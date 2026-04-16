@@ -142,7 +142,9 @@ test.describe("Refresh token", () => {
 
     expect(result.token, "new access token must be returned").toBeTruthy()
     expect(result.refreshToken, "new refresh token must be returned").toBeTruthy()
-    expect(result.refreshToken, "new refresh token must differ from original").not.toBe(refreshToken)
+    expect(result.refreshToken, "new refresh token must differ from original").not.toBe(
+      refreshToken
+    )
   })
 })
 
